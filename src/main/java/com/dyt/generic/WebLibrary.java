@@ -2,11 +2,14 @@ package com.dyt.generic;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import com.dyt.ors.config.Config;
 //================================================================
@@ -130,8 +133,7 @@ public class WebLibrary extends Config{
 			editbox.clear();
 			editbox.click();
 			editbox.sendKeys(value);
-			editbox.sendKeys(Keys.ESCAPE);
-			
+			editbox.sendKeys(Keys.ESCAPE);			
 		}
 		catch(Exception e) {
 			bStatus = false;
