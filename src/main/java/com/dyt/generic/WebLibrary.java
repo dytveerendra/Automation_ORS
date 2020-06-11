@@ -76,10 +76,10 @@ public class WebLibrary extends Config{
 	Modified Date	:	09th June 2020
 	Modified By		:
 	*/
-	public static boolean setEditValue(String elexpath, String value) {
+	public static boolean setEditValue(WebElement element, String value) {
 		boolean bStatus = true;
 		try {
-			driver.findElement(By.xpath(elexpath)).sendKeys(value);
+			element.sendKeys(value);
 		}
 		catch(Exception e) {
 			bStatus = false;
@@ -87,10 +87,10 @@ public class WebLibrary extends Config{
 		return bStatus;
 	}
 	//==================================================================
-	public static boolean clickElement(String elexpath) {
+	public static boolean clickElement(WebElement element) {
 		boolean bStatus = true;
 		try {
-			driver.findElement(By.xpath(elexpath)).click();
+			element.click();
 		}
 		catch(Exception e) {
 			bStatus = false;
