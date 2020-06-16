@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.dyt.ors.regression.AdminProducts">
+        <methods>
+          <include name="TC002_addSubCategory"/>
+          <include name="toEnd"/>
+          <include name="closeBrowser"/>
+          <include name="setupReport"/>
+          <include name="launchBrowser"/>
+          <include name="TC001_addMainCategory"/>
+        </methods>
+      </class> <!-- com.dyt.ors.regression.AdminProducts -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

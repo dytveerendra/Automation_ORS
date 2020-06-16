@@ -15,15 +15,13 @@ public class Login extends WebLibrary{
 	public static WebElement edit_Password;
 	
 	@FindBy(xpath="//input[@type='submit']")
-	public static WebElement btn_Login;
-	
+	public static WebElement btn_Login;	
 	
 	//=================Login methods=========================
 	
 	public static void loginApp() {		
 		
 		boolean retval;
-		launchApp();
 		
 		retval = setEditValue(edit_UserName, "user02");
 		if(retval)
