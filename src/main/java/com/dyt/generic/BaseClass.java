@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.dyt.ors.config.Config;
-import com.dyt.reports.ReportHTML;
+import com.dyt.reports.Reporter;
 
 public class BaseClass extends Config {
 	
@@ -23,7 +23,7 @@ public class BaseClass extends Config {
 		public void setupReport()
 		{
 			System.out.println("******  Intializing Test Suite *******");		
-			ReportHTML.intializeReports();
+			Reporter.intializeReports();
 			
 			System.out.println("******  Test Suite is intialized sucessfully *******");
 		}	
@@ -31,7 +31,7 @@ public class BaseClass extends Config {
 		@BeforeMethod
 		public void launchBrowser(Method method)  throws IOException {		
 			CurrentTestCaseName = method.getName();
-			ReportHTML.startTest(CurrentTestCaseName);
+			Reporter.startTest(CurrentTestCaseName);
 			System.out.println("<<TestStart>> TestCase Name   " + CurrentTestCaseName + "  <<TestStart>>");
 			Browser = Browser.toUpperCase();
 			
@@ -48,7 +48,7 @@ public class BaseClass extends Config {
 					break; 
 				  
 				case "CHROME":
-					System.setProperty("webdriver.chrome.driver","//server//chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//servers//chromedriver.exe");
 					driver = new ChromeDriver();
 					break;
 			}
@@ -61,7 +61,7 @@ public class BaseClass extends Config {
 
 		@AfterMethod
 		public void closeBrowser() {		
-			ReportHTML.closeTest();
+			Reporter.closeTest();
 			driver.close();
 			System.out.println("<<TestSuccess>> TestCase Name   " + CurrentTestCaseName + "  <<TestSuccess>>");
 			System.out.println();			
@@ -72,7 +72,7 @@ public class BaseClass extends Config {
 		public void flushReportAndOpen() {
 			try {
 				//Reports genreport = new Reports();
-				ReportHTML.flushReport();
+				Reporter.flushReport();
 				
 				Thread.sleep(2000);
 				
@@ -83,9 +83,9 @@ public class BaseClass extends Config {
 			
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
-			driver.get(ReportHTML.resultfile);
+			driver.get(Reporter.resultfile);
 			driver.navigate().refresh();
-		}
+		}		
+		//========================================================================		
 		
-		//========================================================================
 }

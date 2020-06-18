@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.dyt.generic.WebLibrary;
+import com.dyt.reports.Reporter;
 
 public class Login extends WebLibrary{	
 	
@@ -21,27 +22,14 @@ public class Login extends WebLibrary{
 	
 	public static void loginApp() {		
 		
-		boolean retval;
+		boolean bStatus;		
+		bStatus = setEditValue(edit_UserName, "user02");
+		Reporter.log(bStatus, "Username entered", "Username not entered");
+				
+		bStatus = setEditValue(edit_Password, "pass1234");
+		Reporter.log(bStatus, "Password entered", "Password not entered");		
 		
-		retval = setEditValue(edit_UserName, "user02");
-		if(retval)
-			System.out.println("Username entered");
-		else
-			System.out.println("Username not entered");
-		
-		retval = setEditValue(edit_Password, "pass1234");
-		if(retval)
-			System.out.println("Password entered");
-		else
-			System.out.println("Password not entered");
-		
-		retval = clickElement(btn_Login);
-		if(retval)
-			System.out.println("Login button clicked");
-		else
-			System.out.println("Login button not clicked");
+		bStatus = clickElement(btn_Login);
+		Reporter.log(bStatus, "Login button clicked", "Login button not clicked");
 	}
-	
-	
-
 }

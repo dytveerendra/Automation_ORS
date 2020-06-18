@@ -6,11 +6,11 @@
       <class name="com.dyt.ors.regression.AdminProducts">
         <methods>
           <include name="TC002_addSubCategory"/>
-          <include name="toEnd"/>
-          <include name="closeBrowser"/>
           <include name="setupReport"/>
-          <include name="launchBrowser"/>
+          <include name="flushReportAndOpen"/>
           <include name="TC001_addMainCategory"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
         </methods>
       </class> <!-- com.dyt.ors.regression.AdminProducts -->
     </classes>
