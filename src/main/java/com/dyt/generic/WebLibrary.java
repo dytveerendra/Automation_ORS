@@ -307,7 +307,7 @@ public class WebLibrary extends Config {
 			   }		
 		}
 		catch(Exception e) {
-			e.printStackTrace();
+			System.out.println("Unable to highlight element" + element.getAttribute("name"));
 		}
 		
 	}

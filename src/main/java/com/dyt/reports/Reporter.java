@@ -54,7 +54,7 @@ public class Reporter extends Config{
 		if(status)
 			Reporter.logEvent("pass", passMessage);
 		else
-			Reporter.logEvent("fail", passMessage);
+			Reporter.logEvent("fail", failMessage);
 	}
 	//==================================================================
 	public static void logEvent(String status, String stepDescription)
