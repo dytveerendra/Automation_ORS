@@ -31,7 +31,7 @@ public class Reporter extends Config{
 		addSystemInfo("Environment","SIT")
 		.addSystemInfo("Sprint Name", "sprint1");		
 	
-		extent.loadConfig(new File("extent.xml"));		
+		//extent.loadConfig(new File("extent.xml"));		
 	}
 	//==================================================================
 	public static void startTest(String testcasename)
@@ -96,17 +96,16 @@ public class Reporter extends Config{
 	
 	public static String createResultFolder()
 	{		
-		
 		Date d = new Date();
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-				
-		File f = new File(ResultsPath + sdf.format(d).replace("/", "-"));
+		//SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());		
+		File f = new File(ResultsPath + timeStamp.replace(".", "-"));
 		 
 		if(!f.exists())		
 			f.mkdirs();
 			
-		String folderpath = ResultsPath + sdf.format(d).replace("/", "-");		
+		String folderpath = ResultsPath + timeStamp.replace(".", "-");
 		
 		return folderpath;		
 	}

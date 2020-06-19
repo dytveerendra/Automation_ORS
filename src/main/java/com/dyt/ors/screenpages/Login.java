@@ -20,13 +20,13 @@ public class Login extends WebLibrary{
 	
 	//=================Login methods=========================
 	
-	public static void loginApp() {		
+	public static void loginApp(String user, String password) {			
 		
 		boolean bStatus;		
-		bStatus = setEditValue(edit_UserName, "user02");
+		bStatus = setEditValue(edit_UserName, user);
 		Reporter.log(bStatus, "Username entered", "Username not entered");
 				
-		bStatus = setEditValue(edit_Password, "pass1234");
+		bStatus = setEditValue(edit_Password, password);
 		Reporter.log(bStatus, "Password entered", "Password not entered");		
 		
 		bStatus = clickElement(btn_Login);

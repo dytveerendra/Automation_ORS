@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -38,19 +39,27 @@ public class BaseClass extends Config {
 			switch(Browser)
 			{
 				case "FF":				
-					System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+					System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"//servers//geckodriver.exe");
 						driver = new FirefoxDriver();				  
 				  break;
 			
 				case "IE":				
-					System.setProperty("webdriver.ie.driver","IEDriverServer.exe");
+					System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"//servers//IEDriverServer.exe");
 					driver = new InternetExplorerDriver();				 
 					break; 
 				  
 				case "CHROME":
-					System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//servers//chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//servers//chromedriver.exe");
 					driver = new ChromeDriver();
 					break;
+					
+				case "EDGE":
+					System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")+"//servers//MicrosoftWebDriver.exe");
+					driver = new EdgeDriver();
+					break;
+					
+				default: System.out.println("Incorrect browser name");
+					
 			}
 			
 			driver.manage().window().maximize();

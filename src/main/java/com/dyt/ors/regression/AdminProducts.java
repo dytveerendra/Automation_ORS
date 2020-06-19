@@ -11,14 +11,14 @@ public class AdminProducts extends BaseClass {
 
 	@Test
 	public static void TC001_addMainCategory()
-	{
+	{		
 		Login login = PageFactory.initElements(driver, Login.class);
 		Home home = PageFactory.initElements(driver, Home.class);
-		//Step 1: Login as a admin
-		login.loginApp();	
+		//Step 1: Login as an admin
+		Home.navLoginpage();
+		login.loginApp("admin","admin@123");
 		
-		//Step 2: Navigate to Main Category page
-		
+		//Step 2: Navigate to Main Category page		
 		
 		
 		// Step n : Logout		
@@ -26,26 +26,18 @@ public class AdminProducts extends BaseClass {
 	//=============================================
 	@Test
 	public static void TC002_addSubCategory()
-	{
-		
-		
-		
-		
-		
-		
-	}
-	//=============================================
-	public static void TC002_addProduct()
-	{
-		
-		
-		
-		
+	{		
+		Login login = PageFactory.initElements(driver, Login.class);
+		Home home = PageFactory.initElements(driver, Home.class);
+		//Step 1: Login as an admin
+		Home.navLoginpage();
+		login.loginApp("admin","admin@123");
 		
 		
 		
 		
 	}
 	//=============================================
+	
 	
 }
