@@ -18,8 +18,7 @@ public class Home extends WebLibrary{
 	public static void navLoginpage() {		
 		boolean bStatus = clickElement(link_Login);
 		Reporter.log(bStatus, "Login link clicked", "Login link not clicked");
-	}
-	
+	}	
 	
 	
 	//===========================================

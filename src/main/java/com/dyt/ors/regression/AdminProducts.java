@@ -34,10 +34,14 @@ public class AdminProducts extends BaseClass {
 		login.loginApp("admin","admin@123");
 		
 		
+	}
+	//=============================================
+	@Test
+	public static void TC003_addProduct()
+	{		
 		
 		
 	}
 	//=============================================
-	
 	
 }
