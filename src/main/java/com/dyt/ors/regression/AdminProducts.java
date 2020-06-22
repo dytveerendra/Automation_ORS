@@ -4,8 +4,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.dyt.generic.BaseClass;
+import com.dyt.ors.screenpages.Dashboard;
 import com.dyt.ors.screenpages.Home;
 import com.dyt.ors.screenpages.Login;
+import com.dyt.ors.screenpages.MainCategories;
 
 public class AdminProducts extends BaseClass {
 
@@ -14,11 +16,16 @@ public class AdminProducts extends BaseClass {
 	{		
 		Login login = PageFactory.initElements(driver, Login.class);
 		Home home = PageFactory.initElements(driver, Home.class);
+		Dashboard dashboard = PageFactory.initElements(driver, Dashboard.class);
+		MainCategories maincategories = PageFactory.initElements(driver, MainCategories.class);
+		
 		//Step 1: Login as an admin
 		Home.navLoginpage();
 		login.loginApp("admin","admin@123");
 		
-		//Step 2: Navigate to Main Category page		
+		//Step 2: Navigate to Main Category page
+		dashboard.navMainCategories();
+		
 		
 		
 		// Step n : Logout		
