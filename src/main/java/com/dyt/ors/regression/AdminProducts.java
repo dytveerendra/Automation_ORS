@@ -47,7 +47,7 @@ public class AdminProducts extends BaseClass {
 	@Test
 	public static void TC004_EditProductDetails()
 	{		
-		
+		//Write a code here
 		
 	}
 	//=============================================
