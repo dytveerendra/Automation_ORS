@@ -3,7 +3,14 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.dyt.ors.smoke.SmokeTestCases"/>
+      <class name="com.dyt.ors.smoke.SmokeTestCases">
+      	<methods>
+      		<include name="TC001_addMainCategory"/>
+      		<exclude name="TC002_addSubCategory"/>
+      		<exclude name="TC003_addProduct"/> 
+      		<exclude name="TC004_EditProductDetails"/>      
+      	</methods>      
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

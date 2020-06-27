@@ -8,12 +8,14 @@ import com.dyt.ors.screenpages.Dashboard;
 import com.dyt.ors.screenpages.Home;
 import com.dyt.ors.screenpages.Login;
 import com.dyt.ors.screenpages.MainCategories;
+import com.dyt.utilities.ExcelLib;
 
 public class AdminProducts extends BaseClass {
 
 	@Test
-	public static void TC001_addMainCategory()
+	public static void TC001_addMainCategory()	
 	{		
+		String[] data = ExcelLib.getRowData("TC001_addMainCategory", Smoke_Sheet);
 		Login login = PageFactory.initElements(driver, Login.class);
 		Home home = PageFactory.initElements(driver, Home.class);
 		Dashboard dashboard = PageFactory.initElements(driver, Dashboard.class);
@@ -21,12 +23,10 @@ public class AdminProducts extends BaseClass {
 		
 		//Step 1: Login as an admin
 		Home.navLoginpage();
-		login.loginApp("admin","admin@123");
+		login.loginApp(data[0],data[1]);
 		
 		//Step 2: Navigate to Main Category page
-		dashboard.navMainCategories();
-		
-		
+		dashboard.navMainCategories();	
 		
 		// Step n : Logout		
 	}

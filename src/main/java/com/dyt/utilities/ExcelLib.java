@@ -8,6 +8,8 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.dyt.ors.config.Config;
+
 //============================================================
 /*
  * 
@@ -16,7 +18,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  * 
  * 
  */
-public class ExcelLib {		
+public class ExcelLib extends Config{		
 	//============================================================
 	/*
 	 * 
@@ -52,6 +54,56 @@ public class ExcelLib {
 		
 		return strCellValue;
 	}
+	//============================================================
+	
+	public static String[] getRowData(String TCName, String sheetname)
+	{
+		boolean bTag = false;
+		String[] arr = new String[20];
+		try{					
+			File file = new File(TestDataPath);
+			inpstr = new FileInputStream(file);
+			workbook = new XSSFWorkbook(inpstr);
+								
+			XSSFSheet sheet = workbook.getSheet(sheetname);	
+			
+			int rowcount = sheet.getLastRowNum()+1;
+			// Search for input test case name in each row at column 2
+			for(int i=1; i<rowcount; i++) 
+			{
+				Row row = sheet.getRow(i);
+				String exlTCName = row.getCell(1).getStringCellValue();					
+				if(TCName.equals(exlTCName.trim()))						
+				{
+					int colLastIndexCount = row.getLastCellNum();
+					for(int j=2; j<=colLastIndexCount; j++)
+					{
+						arr[j-2]  = row.getCell(j).getStringCellValue();
+					}		
+												
+					bTag = true;
+					break;
+				}						
+			}
+			
+			if(bTag==false)
+			{
+				System.out.println(TCName +" - Test case not found in test data sheet - "+ sheetname);
+			}						
+		}				
+		
+		catch(IOException e)	{
+			System.out.println(TestDataPath +" - File not found or unable to read/write data");
+		}
+		
+		catch(Exception e)	{
+			System.out.println(e.getMessage());
+		}
+		
+		return arr;		
+	}
+	
+	//============================================================
 	
 	//============================================================
 	public static String[] getRowData(String filepath, String sheetname, int colIndex, String cellValue)
