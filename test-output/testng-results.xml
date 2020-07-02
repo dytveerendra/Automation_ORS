@@ -1,59 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="727319" started-at="2020-06-19T02:17:26Z" finished-at="2020-06-19T02:29:34Z">
+  <suite name="Suite" duration-ms="24054" started-at="2020-06-27T03:20:55Z" finished-at="2020-06-27T03:21:19Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="727319" started-at="2020-06-19T02:17:26Z" finished-at="2020-06-19T02:29:34Z">
-      <class name="com.dyt.ors.regression.AdminProducts">
-        <test-method status="PASS" signature="setupReport()[pri:0, instance:com.dyt.ors.regression.AdminProducts@43195e57]" name="setupReport" is-config="true" duration-ms="96746" started-at="2020-06-19T02:15:50Z" finished-at="2020-06-19T02:17:26Z">
+    <test name="Test" duration-ms="24054" started-at="2020-06-27T03:20:55Z" finished-at="2020-06-27T03:21:19Z">
+      <class name="com.dyt.ors.smoke.SmokeTestCases">
+        <test-method status="PASS" signature="setupReport()[pri:0, instance:com.dyt.ors.smoke.SmokeTestCases@e25b2fe]" name="setupReport" is-config="true" duration-ms="504" started-at="2020-06-27T03:20:54Z" finished-at="2020-06-27T03:20:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupReport -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.reflect.Method)[pri:0, instance:com.dyt.ors.regression.AdminProducts@43195e57]" name="launchBrowser" is-config="true" duration-ms="207716" started-at="2020-06-19T02:17:27Z" finished-at="2020-06-19T02:20:54Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.reflect.Method)[pri:0, instance:com.dyt.ors.smoke.SmokeTestCases@e25b2fe]" name="launchBrowser" is-config="true" duration-ms="11478" started-at="2020-06-27T03:20:55Z" finished-at="2020-06-27T03:21:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public static void com.dyt.ors.regression.AdminProducts.TC001_addMainCategory()]]>
+                <![CDATA[public static void com.dyt.ors.smoke.SmokeTestCases.TC001_addMainCategory()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="TC001_addMainCategory()[pri:0, instance:com.dyt.ors.regression.AdminProducts@43195e57]" name="TC001_addMainCategory" duration-ms="407475" started-at="2020-06-19T02:20:54Z" finished-at="2020-06-19T02:27:42Z">
+        <test-method status="PASS" signature="TC001_addMainCategory()[pri:0, instance:com.dyt.ors.smoke.SmokeTestCases@e25b2fe]" name="TC001_addMainCategory" duration-ms="12203" started-at="2020-06-27T03:21:06Z" finished-at="2020-06-27T03:21:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC001_addMainCategory -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.dyt.ors.regression.AdminProducts@43195e57]" name="closeBrowser" is-config="true" duration-ms="412" started-at="2020-06-19T02:27:42Z" finished-at="2020-06-19T02:27:42Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.dyt.ors.smoke.SmokeTestCases@e25b2fe]" name="closeBrowser" is-config="true" duration-ms="307" started-at="2020-06-27T03:21:19Z" finished-at="2020-06-27T03:21:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.reflect.Method)[pri:0, instance:com.dyt.ors.regression.AdminProducts@43195e57]" name="launchBrowser" is-config="true" duration-ms="21969" started-at="2020-06-19T02:27:42Z" finished-at="2020-06-19T02:28:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public static void com.dyt.ors.regression.AdminProducts.TC002_addSubCategory()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="TC002_addSubCategory()[pri:0, instance:com.dyt.ors.regression.AdminProducts@43195e57]" name="TC002_addSubCategory" duration-ms="89290" started-at="2020-06-19T02:28:04Z" finished-at="2020-06-19T02:29:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC002_addSubCategory -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.dyt.ors.regression.AdminProducts@43195e57]" name="closeBrowser" is-config="true" duration-ms="275" started-at="2020-06-19T02:29:33Z" finished-at="2020-06-19T02:29:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="flushReportAndOpen()[pri:0, instance:com.dyt.ors.regression.AdminProducts@43195e57]" name="flushReportAndOpen" is-config="true" duration-ms="11384" started-at="2020-06-19T02:29:34Z" finished-at="2020-06-19T02:29:45Z">
+        <test-method status="PASS" signature="flushReportAndOpen()[pri:0, instance:com.dyt.ors.smoke.SmokeTestCases@e25b2fe]" name="flushReportAndOpen" is-config="true" duration-ms="10633" started-at="2020-06-27T03:21:19Z" finished-at="2020-06-27T03:21:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReportAndOpen -->
-      </class> <!-- com.dyt.ors.regression.AdminProducts -->
+      </class> <!-- com.dyt.ors.smoke.SmokeTestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -18,7 +18,7 @@ import com.dyt.ors.config.Config;
  * 
  * 
  */
-public class ExcelLib extends Config{		
+public class ExcelLib extends Config {	
 	//============================================================
 	/*
 	 * 
@@ -32,8 +32,7 @@ public class ExcelLib extends Config{
 	public static String getCellValue(String filepath, String sheetname, int rowIndex, int colIndex)
 	{
 		String strCellValue = null;
-		try{	
-			
+		try{			
 			File file = new File(filepath);
 			inpstr = new FileInputStream(file);
 			workbook = new XSSFWorkbook(inpstr);					
