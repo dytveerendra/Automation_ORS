@@ -25,5 +25,21 @@ public class SmokeTestCases extends BaseClass{
 		
 		// Step n : Logout		
 	}
+	
+	@Test
+	public static void TC002_addMainCategory()
+	{		
+		String[] data = ExcelLib.getRowData("TC001_addMainCategory", Smoke_Sheet);
+		Login login = PageFactory.initElements(driver, Login.class);
+		Home home = PageFactory.initElements(driver, Home.class);
+		//Step 1: Login as an admin
+		Home.navLoginpage();
+		login.loginApp(data[0],data[1]);
+		
+		//Step 2: Navigate to Main Category page		
+		
+		
+		// Step n : Logout		
+	}
 
 }
