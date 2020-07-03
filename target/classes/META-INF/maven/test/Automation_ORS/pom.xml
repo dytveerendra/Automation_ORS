@@ -41,7 +41,6 @@
 	<dependency>
 	    <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
-        <version>6.1.1</version>
         <scope>compile</scope>
 	</dependency>	
   </dependencies>
@@ -76,4 +75,13 @@
 		</plugins>
 	</build>
 	
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.testng</groupId>
+  			<artifactId>testng</artifactId>
+  			<version>6.1.1</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
