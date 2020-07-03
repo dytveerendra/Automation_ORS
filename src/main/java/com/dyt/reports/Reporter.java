@@ -59,7 +59,7 @@ public class Reporter extends Config{
 	//==================================================================
 	public static void logEvent(String status, String stepDescription)
 	{		
-		switch (status.toLowerCase()) {
+		switch (status) {
 		case "pass":			
 			test.log(LogStatus.PASS, stepDescription+test.addScreenCapture(getScreenShot()));			
 			break;
