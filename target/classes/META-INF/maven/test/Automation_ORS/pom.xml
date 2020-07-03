@@ -40,9 +40,9 @@
 	
 	<dependency>
 	    <groupId>org.testng</groupId>
-	    <artifactId>testng</artifactId>
-	    <version>7.1.0</version>
-	    <scope>test</scope>
+        <artifactId>testng</artifactId>
+        <version>6.1.1</version>
+        <scope>compile</scope>
 	</dependency>	
   </dependencies>
   
