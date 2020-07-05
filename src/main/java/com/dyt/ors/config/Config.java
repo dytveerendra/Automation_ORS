@@ -8,6 +8,7 @@ public class Config {
 	public static String Browser = "chrome";
 	public static String CurrentTestCaseName = "";
 	public static String TestDataPath = System.getProperty("user.dir")+"//TestData//TestData.xlsx";
+	public static String TestDataFiles = System.getProperty("user.dir")+"//TestData//DataFiles//";
 	public static String ResultsPath = System.getProperty("user.dir")+"//Results//";
 	public static String Smoke_Sheet = "smoke";
 	public static String Regression_Sheet = "regression";

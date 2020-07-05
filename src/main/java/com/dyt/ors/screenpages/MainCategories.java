@@ -1,7 +1,14 @@
 package com.dyt.ors.screenpages;
 
-public class MainCategories {
-	
-	
+import com.dyt.generic.WebLibrary;
 
+public class MainCategories extends WebLibrary{
+	
+	//Elements
+	
+	
+	void upload_Image() {
+		//uploadFile(choosefile, TestDataFiles + "chemical.JPG");
+	}
+	
 }
