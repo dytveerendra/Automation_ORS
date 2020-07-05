@@ -34,7 +34,7 @@ public class BaseClass extends Config {
 			CurrentTestCaseName = method.getName();
 			Reporter.startTest(CurrentTestCaseName);
 			System.out.println("<<TestStart>> TestCase Name   " + CurrentTestCaseName + "  <<TestStart>>");
-			Browser = Browser.toUpperCase();
+			//Browser = Browser.toUpperCase();
 			
 			switch(Browser)
 			{
